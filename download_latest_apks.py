@@ -23,6 +23,9 @@ def show_progress_bar(block_num, block_size, total_size):
 
 path, headers = urlretrieve(url, filename, show_progress_bar)
 
+print("Unzipping...")
 with gzip.open(path, 'rb') as f_in:
-    with open(path.rstrip('.gz')) as f_out:
+    with open(path.rstrip('.gz'), 'wb') as f_out:
         shutil.copyfileobj(f_in, f_out)
+
+print("Done.")
