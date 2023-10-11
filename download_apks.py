@@ -6,7 +6,7 @@ from urllib.request import urlretrieve
 import progressbar
 from dotenv import dotenv_values
 
-env = dotenv_values('.ben')
+env = dotenv_values('.env')
 config = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation(), allow_no_value=True)
 config.read('config.ini')
 
